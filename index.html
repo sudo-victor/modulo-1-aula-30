@@ -1,0 +1,48 @@
+<html>
+  <head>
+    <title>Documento de teste</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <link href="style.css" rel="stylesheet" />
+  </head>
+
+  <body>
+    <button onclick="toggleTheme()">dark mode</button>
+    <h1 id="title">Este é o  título da página</h1>
+    <section id="section">
+      <p id="firstParagraph"> Lorem ipsum dolor sit amet consecteturLorem ipsum dolor sit amet consecteturLorem ipsum dolor sit amet consecteturLorem ipsum dolor sit amet consecteturLorem ipsum dolor sit amet consecteturLorem ipsum dolor sit amet consecteturLorem ipsum dolor sit amet consecteturLorem ipsum dolor sit amet consecteturLorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi, beatae! Non ratione quae tempore, sequi cupiditate ducimus maxime quam. Voluptatum.</p>
+      <p id="secondParagraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur modi ab voluptatem quaerat dolorem sed quibusdam deleniti ipsa aperiam fuga. Illo magni laudantium, placeat ea mollitia delectus? Officia, aut animi.</p>
+    </section>
+    <p id="thirdParagraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae modi architecto harum velit a nulla aut neque ex expedita asperiores, unde molestias, amet distinctio repudiandae earum aliquam magni, voluptatem itaque!</p>
+
+    <script>
+      // Faça um botão de dark mode para o site. Escreva uma função javascript que aplica um
+      // inline-style no fundo da tela, trocando de branco para preto, e aplica um inline-style em
+      // todos os textos trocando-os de cinza para branco. Faça a função de uma forma que se o
+      // estilo de dark mode estiver aplicado, o site troca para o tema normal, caso não esteja, ele
+      // ativa o dark mode.
+
+      // pegar o body
+      const bodyElement = document.querySelector('body')
+      let isDarkMode = true
+
+      function toggleTheme() {
+        // verificar se esta no modo escuro ou n
+        if (isDarkMode) {
+          // se tiver ele vai trocar as cores para o light
+          bodyElement.style.background = "white";
+          bodyElement.style.color = "#2b2b2a";
+          isDarkMode = false
+        } else {
+          // se n tiver ele vai trocar as cores para o dark
+          bodyElement.style.color = "white";
+          bodyElement.style.background = "#2b2b2a";
+          isDarkMode = true
+        }
+      }
+
+    </script>
+  </body>
+</html>
+
